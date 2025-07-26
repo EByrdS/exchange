@@ -1,0 +1,59 @@
+syntax  = "proto3";
+
+package exchange.engine.api.v1;
+
+import "api/v1/order.proto";
+import "engine/api/v1/match.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "exchange/engine/api/v1;enginepb";
+
+message OrderEvent {
+  enum Type {
+    UNDEFINED = 0;
+
+    MAKER_ORDER_INSERTED = 1;
+
+    ORDER_CANCELLED = 2;
+
+    ORDER_REJECTED = 3;
+
+    TAKER_ORDER_UNFULFILLED = 4;
+  }
+
+  Type type = 1;
+
+  string order_id = 2;
+
+  google.protobuf.Timestamp time = 3;
+}
+
+message VolumeEvent {
+  string pair = 1;
+
+  exchange.api.v1.Side side = 2;
+
+  uint64 price = 3;
+
+  uint64 volume = 4;
+
+  google.protobuf.Timestamp time = 5;
+}
+
+message MatchEvent {
+  string pair = 1;
+
+  string taker_order_id = 2;
+
+  exchange.engine.api.v1.MatchType taker_match_type = 3;
+
+  string maker_order_id = 4;
+
+  exchange.engine.api.v1.MatchType maker_match_type = 5;
+
+  uint64 matched_volume = 6;
+
+  uint64 settlement_price = 7;
+
+  google.protobuf.Timestamp time = 8;
+}

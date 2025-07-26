@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package exchange.engine.api.v1;
+
+import "api/v1/order.proto";
+
+option go_package = "exchange/engine/api/v1;enginepb";
+
+message OrderRequest {
+  enum Type {
+    ORDER_REQUEST_UNSPECIFIED = 0;
+
+    MARKET = 1;
+
+    LIMIT = 2;
+
+    CANCEL = 3;
+  }
+
+  Type type = 1;
+
+  exchange.api.v1.Order order = 2;
+}

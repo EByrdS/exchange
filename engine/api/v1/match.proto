@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package exchange.engine.api.v1;
+
+import "api/v1/order.proto";
+
+option go_package = "exchange/engine/api/v1;enginepb";
+
+message Match {
+  exchange.api.v1.Order maker_order = 1;
+
+  MatchType match_type = 2;
+
+  uint64 volume_taken = 3;
+}
+
+enum MatchType {
+  MATCH_TYPE_UNDEFINED = 0;
+
+  ORDER_FULFILLED = 1;
+
+  ORDER_PARTIALLY_FULFILLED = 2;
+}

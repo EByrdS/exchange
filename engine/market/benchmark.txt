@@ -1,0 +1,34 @@
+goos: darwin
+goarch: arm64
+pkg: exchange/engine/market
+cpu: Apple M2 Max
+Benchmark_Cancel/one_thousand_range_hundredth-12         	    1396	    847518 ns/op	  112452 B/op	    2003 allocs/op
+Benchmark_Cancel/one_thousand_range_tenth-12             	    1514	    805022 ns/op	  114742 B/op	    2013 allocs/op
+Benchmark_Cancel/ten_thousand_range_hundrendth-12        	     139	   8351846 ns/op	 1122764 B/op	   20013 allocs/op
+Benchmark_Cancel/ten_thousand_range_tenth-12             	     162	   6775723 ns/op	 1146116 B/op	   20036 allocs/op
+Benchmark_Cancel/hundred_thousand_range_hundrendth-12    	      16	  73464203 ns/op	11226706 B/op	  200036 allocs/op
+Benchmark_Cancel/hundred_thousand_range_tenth-12         	      14	  78964188 ns/op	11457788 B/op	  200068 allocs/op
+Benchmark_Cancel/million_range_hundrendth-12             	       1	1039569042 ns/op	112250264 B/op	 2000072 allocs/op
+Benchmark_Cancel/million_range_tenth-12                  	       2	 898209500 ns/op	114153824 B/op	 2000107 allocs/op
+Benchmark_InsertMakerOrder/one_thousand_range_hundredth-12         	    1388	    905820 ns/op	  285528 B/op	    3126 allocs/op
+Benchmark_InsertMakerOrder/one_thousand_range_tenth-12             	    1618	    853441 ns/op	  246531 B/op	    3592 allocs/op
+Benchmark_InsertMakerOrder/ten_thousand_range_hundrendth-12        	     145	   7496667 ns/op	 2706833 B/op	   31321 allocs/op
+Benchmark_InsertMakerOrder/ten_thousand_range_tenth-12             	     168	   6622249 ns/op	 2484093 B/op	   35903 allocs/op
+Benchmark_InsertMakerOrder/hundred_thousand_range_hundrendth-12    	      18	  70420558 ns/op	26973310 B/op	  313187 allocs/op
+Benchmark_InsertMakerOrder/hundred_thousand_range_tenth-12         	      14	  81672845 ns/op	24698594 B/op	  359068 allocs/op
+Benchmark_InsertMakerOrder/million_range_hundrendth-12             	       2	 909130605 ns/op	269309472 B/op	 3131907 allocs/op
+Benchmark_InsertMakerOrder/million_range_tenth-12                  	       1	1082330000 ns/op	245776920 B/op	 3592715 allocs/op
+Benchmark_PriceDeletionAndInsertion/ten_prices_each_side-12        	   47475	     26907 ns/op	   12183 B/op	     180 allocs/op
+Benchmark_PriceDeletionAndInsertion/hundred_prices_each_side-12    	    4456	    268298 ns/op	  122832 B/op	    1803 allocs/op
+Benchmark_PriceDeletionAndInsertion/thousand_prices_each_side-12   	     427	   2939538 ns/op	 1252320 B/op	   18029 allocs/op
+Benchmark_PriceDeletionAndInsertion/ten_thousand_prices_each_side-12         	      39	  31736003 ns/op	12773550 B/op	  181570 allocs/op
+Benchmark_MatchTakerOrder/one_thousand_range_hundredth-12                    	   13285	     88506 ns/op	   48521 B/op	     690 allocs/op
+Benchmark_MatchTakerOrder/one_thousand_range_tenth-12                        	   12512	     96082 ns/op	   50287 B/op	     714 allocs/op
+Benchmark_MatchTakerOrder/ten_thousand_range_hundrendth-12                   	    1275	    865354 ns/op	  500491 B/op	    7122 allocs/op
+Benchmark_MatchTakerOrder/ten_thousand_range_tenth-12                        	    1320	    895805 ns/op	  502685 B/op	    7140 allocs/op
+Benchmark_MatchTakerOrder/hundred_thousand_range_hundrendth-12               	     135	   8725249 ns/op	 5011351 B/op	   71321 allocs/op
+Benchmark_MatchTakerOrder/hundred_thousand_range_tenth-12                    	     135	   8918146 ns/op	 5026747 B/op	   71327 allocs/op
+Benchmark_MatchTakerOrder/million_range_hundrendth-12                        	      13	  84525295 ns/op	50124576 B/op	  713294 allocs/op
+Benchmark_MatchTakerOrder/million_range_tenth-12                             	      13	  90851087 ns/op	50266104 B/op	  712992 allocs/op
+PASS
+ok  	exchange/engine/market	174.031s
