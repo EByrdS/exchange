@@ -1,0 +1,30 @@
+goos: darwin
+goarch: arm64
+pkg: exchange/engine/orderbook
+cpu: Apple M2 Max
+Benchmark_Delete/one_thousand_range_hundredth-12         	   17054	     69691 ns/op	     480 B/op	       4 allocs/op
+Benchmark_Delete/one_thousand_range_tenth-12             	   16272	     73117 ns/op	    2240 B/op	       8 allocs/op
+Benchmark_Delete/ten_thousand_range_hundrendth-12        	    1800	    672841 ns/op	    2248 B/op	       8 allocs/op
+Benchmark_Delete/ten_thousand_range_tenth-12             	    2098	    599613 ns/op	   19043 B/op	      14 allocs/op
+Benchmark_Delete/hundred_thousand_range_hundrendth-12    	     174	   6521097 ns/op	   19102 B/op	      14 allocs/op
+Benchmark_Delete/hundred_thousand_range_tenth-12         	     172	   6890941 ns/op	  266739 B/op	      22 allocs/op
+Benchmark_Delete/million_range_hundrendth-12             	       8	 134910755 ns/op	  267924 B/op	      23 allocs/op
+Benchmark_Delete/million_range_tenth-12                  	      16	  75623651 ns/op	 2102738 B/op	      28 allocs/op
+Benchmark_Insert/one_thousand_range_hundredth-12         	    9450	    147429 ns/op	  181491 B/op	    1126 allocs/op
+Benchmark_Insert/one_thousand_range_tenth-12             	    9462	    134837 ns/op	  134358 B/op	    1593 allocs/op
+Benchmark_Insert/ten_thousand_range_hundrendth-12        	     868	   1390435 ns/op	 1593302 B/op	   11317 allocs/op
+Benchmark_Insert/ten_thousand_range_tenth-12             	     828	   1511567 ns/op	 1354303 B/op	   15902 allocs/op
+Benchmark_Insert/hundred_thousand_range_hundrendth-12    	      74	  17147344 ns/op	15750548 B/op	  113193 allocs/op
+Benchmark_Insert/hundred_thousand_range_tenth-12         	      75	  17564231 ns/op	13413775 B/op	  159078 allocs/op
+Benchmark_Insert/million_range_hundrendth-12             	       4	 304525490 ns/op	156687142 B/op	 1131902 allocs/op
+Benchmark_Insert/million_range_tenth-12                  	       3	 422945515 ns/op	132901016 B/op	 1592604 allocs/op
+Benchmark_Match/one_thousand_range_hundredth-12          	   15952	     74938 ns/op	   75266 B/op	    1060 allocs/op
+Benchmark_Match/one_thousand_range_tenth-12              	   14965	     79876 ns/op	   54996 B/op	    1116 allocs/op
+Benchmark_Match/ten_thousand_range_hundrendth-12         	     967	   1245192 ns/op	  869127 B/op	   10529 allocs/op
+Benchmark_Match/ten_thousand_range_tenth-12              	    1046	   1157346 ns/op	  695450 B/op	   11042 allocs/op
+Benchmark_Match/hundred_thousand_range_hundrendth-12     	     100	  11110373 ns/op	 9197554 B/op	  105048 allocs/op
+Benchmark_Match/hundred_thousand_range_tenth-12          	       9	 123527833 ns/op	92659214 B/op	 1050070 allocs/op
+Benchmark_Match/million_range_hundrendth-12              	       9	 125925389 ns/op	92662557 B/op	 1050068 allocs/op
+Benchmark_Match/million_range_tenth-12                   	      12	 103084879 ns/op	75985029 B/op	 1100104 allocs/op
+PASS
+ok  	exchange/engine/orderbook	95.157s

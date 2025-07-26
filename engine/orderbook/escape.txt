@@ -1,0 +1,921 @@
+# exchange/engine/orderbook
+../structures/rbtree/search.go:46:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min with cost 18 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { if rbtree.min == nil { return nil }; for loop }
+../structures/rbtree/search.go:59:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max with cost 18 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { if rbtree.max == nil { return nil }; for loop }
+../structures/rbtree/transplant.go:6:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant with cost 34 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }], *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) { if rbtree.current.Parent == nil { rbtree.t.Root = rbtree.new } else { if rbtree.current == rbtree.current.Parent.Left { rbtree.current.Parent.Left = rbtree.new } else { rbtree.current.Parent.Right = rbtree.new } }; if rbtree.new != nil { rbtree.new.Parent = rbtree.current.Parent } }
+../structures/rbtree/node.go:111:6: can inline rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack with cost 8 as: method(*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[5]uintptr) bool { return rbtree.n == nil || !rbtree.n.Red }
+../structures/rbtree/delete.go:117:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).safeChild with cost 16 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }], rbtree.ChildSide) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { if rbtree.parent == nil { return nil }; if rbtree.side == rbtree.ChildSide(0) { return rbtree.parent.Left }; return rbtree.parent.Right }
+../structures/rbtree/node.go:107:6: can inline rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed with cost 7 as: method(*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[5]uintptr) bool { return rbtree.n != nil && rbtree.n.Red }
+../structures/rbtree/rotate.go:11:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft with cost 70 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) { if rbtree.x == nil { return  }; if rbtree.x.Right == nil { return  }; rbtree.y := rbtree.x.Right; rbtree.x.Right = rbtree.y.Left; if rbtree.y.Left != nil { rbtree.y.Left.Parent = rbtree.x }; rbtree.y.Parent = rbtree.x.Parent; if rbtree.x.Parent == nil { rbtree.t.Root = rbtree.y } else { if rbtree.x == rbtree.x.Parent.Left { rbtree.x.Parent.Left = rbtree.y } else { rbtree.x.Parent.Right = rbtree.y } }; rbtree.y.Left = rbtree.x; rbtree.x.Parent = rbtree.y }
+../structures/rbtree/rotate.go:45:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight with cost 69 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) { if rbtree.x == nil || rbtree.x.Left == nil { return  }; rbtree.y := rbtree.x.Left; rbtree.x.Left = rbtree.y.Right; if rbtree.y.Right != nil { rbtree.y.Right.Parent = rbtree.x }; rbtree.y.Parent = rbtree.x.Parent; if rbtree.x.Parent == nil { rbtree.t.Root = rbtree.y } else { if rbtree.x == rbtree.x.Parent.Left { rbtree.x.Parent.Left = rbtree.y } else { rbtree.x.Parent.Right = rbtree.y } }; rbtree.y.Right = rbtree.x; rbtree.x.Parent = rbtree.y }
+../structures/rbtree/delete.go:127:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).deleteFixup: function too complex: cost 855 exceeds budget 80
+../structures/rbtree/tree.go:60:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).putNode with cost 66 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) { *rbtree.n = rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{}; (*sync.Pool).Put(rbtree.t.pool, rbtree.n) }
+../structures/rbtree/delete.go:35:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete: function too complex: cost 540 exceeds budget 80
+../structures/rbtree/delete.go:25:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode: function too complex: cost 86 exceeds budget 80
+./delete.go:12:6: can inline (*OrderBook).deletePriceNode with cost 68 as: method(*OrderBook) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { delete(b.priceMap, node.Value); (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], node) }
+./delete.go:22:6: cannot inline (*OrderBook).Delete: function too complex: cost 454 exceeds budget 80
+../structures/rbtree/search.go:24:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head with cost 3 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { return rbtree.t.head }
+./head.go:8:6: can inline OrderBook.HeadPrice with cost 25 as: method(OrderBook) func() uint64 { head := (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head(o.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]); if head == nil { return uint64(0) }; return (*pricelevel.PriceLevel).Price(head.Data) }
+../structures/rbtree/search.go:79:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).find with cost 78 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr, uint64) (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }], rbtree.ChildSide, *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) { if rbtree.t.Root == nil { return nil, rbtree.ChildSide(0), nil }; if rbtree.t.Root.Value == rbtree.value { return rbtree.t.Root, rbtree.ChildSide(0), nil }; rbtree.parent = rbtree.t.Root; for loop }
+../structures/rbtree/tree.go:56:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).getNode with cost 68 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { return <node DYNAMICDOTTYPE> }
+../structures/rbtree/insert.go:12:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Insert: function too complex: cost 738 exceeds budget 80
+./insert.go:12:6: cannot inline (*OrderBook).insertPriceNode: function too complex: cost 154 exceeds budget 80
+./insert.go:31:6: cannot inline (*OrderBook).Insert: function too complex: cost 308 exceeds budget 80
+./match.go:11:6: cannot inline (*OrderBook).MatchAndExtract: function too complex: cost 256 exceeds budget 80
+../structures/rbtree/tree.go:48:6: can inline rbtree.NewTree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] with cost 12 as: func(*[2]uintptr, rbtree.TreeOrientation, *sync.Pool) *rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { rbtree.t := &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}; return rbtree.t }
+./orderbook.go:26:6: can inline New with cost 41 as: func(order.OrderSide, *sync.Pool, func(uint64, uint64)) *OrderBook { treeOrientation := rbtree.TreeOrientation(0); if side == order.OrderSide(0) { treeOrientation = rbtree.TreeOrientation(1) }; return &OrderBook{...} }
+./snapshot.go:6:6: can inline (*OrderBook).Snapshot with cost 29 as: method(*OrderBook) func() map[uint64]uint64 { volumes := make(map[uint64]uint64, len(o.priceMap)); for loop; return volumes }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6: can inline atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).CompareAndSwap with cost 63 as: method(*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]) func(*[16]uintptr, *go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }, *go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }) bool { return atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6: can inline atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Swap with cost 62 as: method(*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]) func(*[16]uintptr, *go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }) *go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] } { return (*go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] })(atomic.SwapPointer(&atomic.x.v, unsafe.Pointer(atomic.new))) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6: can inline atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Store with cost 61 as: method(*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]) func(*[16]uintptr, *go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }) { atomic.StorePointer(&atomic.x.v, unsafe.Pointer(atomic.val)) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6: can inline atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Load with cost 4 as: method(*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]) func(*[16]uintptr) *go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] } { return (*go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] })(atomic.LoadPointer(&atomic.x.v)) }
+../structures/rbtree/validate.go:11:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Valid: function too complex: cost 782 exceeds budget 80
+../structures/rbtree/node.go:32:6: cannot inline rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).PrintTree: recursive
+../structures/rbtree/tree.go:37:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).PrintTree: function too complex: cost 142 exceeds budget 80
+../structures/rbtree/search.go:37:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Get: function too complex: cost 164 exceeds budget 80
+../structures/rbtree/search.go:30:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Orientation with cost 3 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr) rbtree.TreeOrientation { return rbtree.t.orientation }
+../structures/rbtree/search.go:17:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Max with cost 27 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max(rbtree.t, (*[73]uintptr)(rbtree..dict[8]), rbtree.t.Root) }
+../structures/rbtree/search.go:10:6: can inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Min with cost 27 as: method(*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[73]uintptr) *rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min(rbtree.t, (*[73]uintptr)(rbtree..dict[7]), rbtree.t.Root) }
+../structures/rbtree/delete.go:11:6: cannot inline rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Delete: function too complex: cost 161 exceeds budget 80
+../structures/rbtree/node.go:103:6: can inline rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRoot with cost 5 as: method(*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]) func(*[5]uintptr) bool { return rbtree.n.Parent == nil }
+../structures/rbtree/tree.go:48:6: can inline rbtree.NewTree[exchange/engine/orderbook/pricelevel.PriceLevel] with cost 19 as: func(rbtree.TreeOrientation, *sync.Pool) *rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel] { return rbtree.NewTree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }](&rbtree..dict.NewTree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.orientation, rbtree.pool) }
+../structures/rbtree/validate.go:11:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Valid with cost 62 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() error { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Valid(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/tree.go:60:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).putNode with cost 71 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).putNode(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.n) }
+../structures/rbtree/tree.go:56:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).getNode with cost 73 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).getNode(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/tree.go:37:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).PrintTree with cost 62 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() string { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).PrintTree(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/transplant.go:6:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Transplant with cost 40 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel], *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.current, rbtree.new) }
+../structures/rbtree/search.go:79:6: cannot inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).find: function too complex: cost 97 exceeds budget 80
+../structures/rbtree/search.go:59:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).max with cost 24 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.max) }
+../structures/rbtree/search.go:46:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).min with cost 24 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.min) }
+../structures/rbtree/search.go:37:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Get with cost 72 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(uint64) (*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel], error) { return .autotmp_4, .autotmp_5 }
+../structures/rbtree/search.go:30:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Orientation with cost 8 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() rbtree.TreeOrientation { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Orientation(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/search.go:24:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Head with cost 8 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/search.go:17:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Max with cost 32 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Max(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/search.go:10:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Min with cost 32 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func() *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Min(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/rotate.go:45:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).RotateRight with cost 74 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x) }
+../structures/rbtree/rotate.go:11:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).RotateLeft with cost 75 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x) }
+../structures/rbtree/insert.go:12:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Insert with cost 63 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(uint64) *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Insert(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value) }
+../structures/rbtree/delete.go:127:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).deleteFixup with cost 64 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel], *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.ChildSide) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).deleteFixup(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x, rbtree.xParent, rbtree.xSide) }
+../structures/rbtree/delete.go:117:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).safeChild with cost 23 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.ChildSide) *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel] { return (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).safeChild(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.parent, rbtree.side) }
+../structures/rbtree/delete.go:35:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).delete with cost 64 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.ChildSide, *rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.holder, rbtree.holderSide, rbtree.holderParent) }
+../structures/rbtree/delete.go:25:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).DeleteNode with cost 62 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.node) }
+../structures/rbtree/delete.go:11:6: can inline rbtree.(*Tree[exchange/engine/orderbook/pricelevel.PriceLevel]).Delete with cost 62 as: method(*rbtree.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) func(uint64) { (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Delete(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6: can inline atomic.(*Pointer[sync.poolChainElt]).CompareAndSwap with cost 70 as: method(*atomic.Pointer[sync.poolChainElt]) func(*sync.poolChainElt, *sync.poolChainElt) bool { return (*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).CompareAndSwap(atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.old, atomic.new) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6: can inline atomic.(*Pointer[sync.poolChainElt]).Swap with cost 68 as: method(*atomic.Pointer[sync.poolChainElt]) func(*sync.poolChainElt) *sync.poolChainElt { return (*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Swap(atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.new) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6: can inline atomic.(*Pointer[sync.poolChainElt]).Store with cost 66 as: method(*atomic.Pointer[sync.poolChainElt]) func(*sync.poolChainElt) { (*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Store(atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.val) }
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6: can inline atomic.(*Pointer[sync.poolChainElt]).Load with cost 9 as: method(*atomic.Pointer[sync.poolChainElt]) func() *sync.poolChainElt { return (*atomic.Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Load(atomic.x, &atomic..dict.Pointer[sync.poolChainElt]) }
+../structures/rbtree/node.go:111:6: can inline rbtree.(*Node[exchange/engine/orderbook/pricelevel.PriceLevel]).IsBlack with cost 13 as: method(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) func() bool { return (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack(rbtree.n, &rbtree..dict.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/node.go:107:6: can inline rbtree.(*Node[exchange/engine/orderbook/pricelevel.PriceLevel]).IsRed with cost 12 as: method(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) func() bool { return (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed(rbtree.n, &rbtree..dict.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/node.go:103:6: can inline rbtree.(*Node[exchange/engine/orderbook/pricelevel.PriceLevel]).IsRoot with cost 10 as: method(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) func() bool { return (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRoot(rbtree.n, &rbtree..dict.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) }
+../structures/rbtree/node.go:32:6: can inline rbtree.(*Node[exchange/engine/orderbook/pricelevel.PriceLevel]).PrintTree with cost 64 as: method(*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) func(*bytes.Buffer, []byte, []byte) { (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).PrintTree(rbtree.n, &rbtree..dict.Node[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.buffer, rbtree.prefix, rbtree.childrenPrefix) }
+./delete.go:36:45: inlining call to pricelevel.(*PriceLevel).Price
+./delete.go:36:70: inlining call to pricelevel.(*PriceLevel).Volume
+./delete.go:37:26: inlining call to pricelevel.(*PriceLevel).Volume
+./delete.go:38:20: inlining call to (*OrderBook).deletePriceNode
+./head.go:9:26: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head
+./head.go:14:24: inlining call to pricelevel.(*PriceLevel).Price
+./insert.go:48:55: inlining call to pricelevel.(*PriceLevel).Volume
+./match.go:16:27: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head
+./match.go:22:41: inlining call to pricelevel.(*PriceLevel).Price
+./match.go:22:61: inlining call to pricelevel.(*PriceLevel).Volume
+./match.go:24:22: inlining call to pricelevel.(*PriceLevel).Volume
+./match.go:25:21: inlining call to (*OrderBook).deletePriceNode
+./orderbook.go:34:62: inlining call to rbtree.NewTree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]
+./snapshot.go:9:41: inlining call to pricelevel.(*PriceLevel).Volume
+../structures/rbtree/search.go:38:22: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).find
+../structures/rbtree/search.go:18:14: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max
+../structures/rbtree/search.go:11:14: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min
+../structures/rbtree/insert.go:13:32: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).find
+../structures/rbtree/insert.go:18:20: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).getNode
+../structures/rbtree/insert.go:44:19: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/insert.go:51:22: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/insert.go:57:14: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed
+../structures/rbtree/insert.go:65:18: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft
+../structures/rbtree/insert.go:70:18: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight
+../structures/rbtree/insert.go:74:14: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed
+../structures/rbtree/insert.go:82:19: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight
+../structures/rbtree/insert.go:87:17: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft
+../structures/rbtree/delete.go:140:30: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:142:19: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).safeChild
+../structures/rbtree/delete.go:145:14: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed
+../structures/rbtree/delete.go:148:17: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft
+../structures/rbtree/delete.go:153:33: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:153:54: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:165:35: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:168:19: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight
+../structures/rbtree/delete.go:180:17: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft
+../structures/rbtree/delete.go:184:19: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).safeChild
+../structures/rbtree/delete.go:186:14: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed
+../structures/rbtree/delete.go:189:18: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight
+../structures/rbtree/delete.go:194:34: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:194:54: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:204:34: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/delete.go:209:18: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft
+../structures/rbtree/delete.go:221:18: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight
+../structures/rbtree/delete.go:45:19: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min
+../structures/rbtree/delete.go:51:19: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max
+../structures/rbtree/delete.go:68:15: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant
+../structures/rbtree/delete.go:77:15: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant
+../structures/rbtree/delete.go:80:13: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min
+../structures/rbtree/delete.go:99:16: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant
+../structures/rbtree/delete.go:104:15: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant
+../structures/rbtree/delete.go:114:11: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).putNode
+../structures/rbtree/delete.go:12:44: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).find
+../structures/rbtree/tree.go:48:6: inlining call to rbtree.NewTree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]
+../structures/rbtree/tree.go:60:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).putNode
+../structures/rbtree/tree.go:56:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).getNode
+../structures/rbtree/transplant.go:6:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Transplant
+../structures/rbtree/search.go:79:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).find
+../structures/rbtree/search.go:59:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max
+../structures/rbtree/search.go:46:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min
+../structures/rbtree/search.go:30:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Orientation
+../structures/rbtree/search.go:24:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head
+../structures/rbtree/search.go:17:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Max
+../structures/rbtree/search.go:17:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).max
+../structures/rbtree/search.go:10:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Min
+../structures/rbtree/search.go:10:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).min
+../structures/rbtree/rotate.go:45:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateRight
+../structures/rbtree/rotate.go:11:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).RotateLeft
+../structures/rbtree/delete.go:117:6: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).safeChild
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6: inlining call to atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).CompareAndSwap
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6: inlining call to atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Swap
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6: inlining call to atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Store
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6: inlining call to atomic.(*Pointer[go.shape.struct { sync.poolDequeue; sync.next sync/atomic.Pointer[sync.poolChainElt]; sync.prev sync/atomic.Pointer[sync.poolChainElt] }]).Load
+../structures/rbtree/node.go:111:6: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsBlack
+../structures/rbtree/node.go:107:6: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRed
+../structures/rbtree/node.go:103:6: inlining call to rbtree.(*Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).IsRoot
+<autogenerated>:1: inlining call to OrderBook.HeadPrice
+<autogenerated>:1: inlining call to rbtree.(*Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Head
+<autogenerated>:1: inlining call to pricelevel.(*PriceLevel).Price
+<autogenerated>:1: inlining call to sync.(*poolDequeue).pack
+<autogenerated>:1: inlining call to sync.(*poolDequeue).unpack
+../structures/rbtree/delete.go:127:43: parameter rbtree.xParent leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:127:43:   flow: rbtree.x = rbtree.xParent:
+../structures/rbtree/delete.go:127:43:     from rbtree.t, rbtree..dict, rbtree.x := rbtree.t, (*[73]uintptr)(rbtree..dict[4]), rbtree.xParent (assign-pair) at ../structures/rbtree/delete.go:221:18
+../structures/rbtree/delete.go:127:43:   flow: {heap} = rbtree.x:
+../structures/rbtree/delete.go:127:43:     from rbtree.y.Right.Parent = rbtree.x (assign) at ../structures/rbtree/delete.go:221:18
+../structures/rbtree/delete.go:127:31: parameter rbtree.x leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:127:31:   flow: rbtree.xParent = *rbtree.x:
+../structures/rbtree/delete.go:127:31:     from rbtree.x.Parent (dot of pointer) at ../structures/rbtree/delete.go:157:16
+../structures/rbtree/delete.go:127:31:     from rbtree.xParent = rbtree.x.Parent (assign) at ../structures/rbtree/delete.go:157:13
+../structures/rbtree/delete.go:127:31:   flow: rbtree.x = rbtree.xParent:
+../structures/rbtree/delete.go:127:31:     from rbtree.t, rbtree..dict, rbtree.x := rbtree.t, (*[73]uintptr)(rbtree..dict[4]), rbtree.xParent (assign-pair) at ../structures/rbtree/delete.go:221:18
+../structures/rbtree/delete.go:127:31:   flow: {heap} = rbtree.x:
+../structures/rbtree/delete.go:127:31:     from rbtree.y.Right.Parent = rbtree.x (assign) at ../structures/rbtree/delete.go:221:18
+../structures/rbtree/delete.go:127:7: parameter rbtree.t leaks to {heap} with derefs=2:
+../structures/rbtree/delete.go:127:7:   flow: rbtree.x = *rbtree.t:
+../structures/rbtree/delete.go:127:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/delete.go:181:10
+../structures/rbtree/delete.go:127:7:     from rbtree.x = rbtree.t.Root (assign) at ../structures/rbtree/delete.go:181:7
+../structures/rbtree/delete.go:127:7:   flow: rbtree.xParent = *rbtree.x:
+../structures/rbtree/delete.go:127:7:     from rbtree.x.Parent (dot of pointer) at ../structures/rbtree/delete.go:157:16
+../structures/rbtree/delete.go:127:7:     from rbtree.xParent = rbtree.x.Parent (assign) at ../structures/rbtree/delete.go:157:13
+../structures/rbtree/delete.go:127:7:   flow: rbtree.x = rbtree.xParent:
+../structures/rbtree/delete.go:127:7:     from rbtree.t, rbtree..dict, rbtree.x := rbtree.t, (*[73]uintptr)(rbtree..dict[4]), rbtree.xParent (assign-pair) at ../structures/rbtree/delete.go:221:18
+../structures/rbtree/delete.go:127:7:   flow: {heap} = rbtree.x:
+../structures/rbtree/delete.go:127:7:     from rbtree.y.Right.Parent = rbtree.x (assign) at ../structures/rbtree/delete.go:221:18
+../structures/rbtree/delete.go:35:26: parameter rbtree.holder leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:35:26:   flow: rbtree.n = rbtree.holder:
+../structures/rbtree/delete.go:35:26:     from rbtree.t, rbtree..dict, rbtree.n := rbtree.t, (*[73]uintptr)(rbtree..dict[2]), rbtree.holder (assign-pair) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:26:   flow: {heap} = rbtree.n:
+../structures/rbtree/delete.go:35:26:     from rbtree.n (interface-converted) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:26:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:35:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/delete.go:35:7:     from rbtree.t, rbtree..dict, rbtree.n := rbtree.t, (*[73]uintptr)(rbtree..dict[2]), rbtree.holder (assign-pair) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:7:   flow: {heap} = *rbtree.t:
+../structures/rbtree/delete.go:35:7:     from rbtree.t.pool (dot of pointer) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:7:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:65: parameter rbtree.holderParent leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:35:65:   flow: rbtree.xParent = rbtree.holderParent:
+../structures/rbtree/delete.go:35:65:     from rbtree.xParent = rbtree.holderParent (assign) at ../structures/rbtree/delete.go:65:11
+../structures/rbtree/delete.go:35:65:   flow: {heap} = rbtree.xParent:
+../structures/rbtree/delete.go:35:65:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).deleteFixup(rbtree.t, (*[73]uintptr)(rbtree..dict[2]), rbtree.x, rbtree.xParent, rbtree.xSide) (call parameter) at ../structures/rbtree/delete.go:111:16
+../structures/rbtree/delete.go:35:26: parameter rbtree.holder leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:35:26:   flow: rbtree.n = rbtree.holder:
+../structures/rbtree/delete.go:35:26:     from rbtree.t, rbtree..dict, rbtree.n := rbtree.t, (*[73]uintptr)(rbtree..dict[2]), rbtree.holder (assign-pair) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:26:   flow: {heap} = rbtree.n:
+../structures/rbtree/delete.go:35:26:     from rbtree.n (interface-converted) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:35:26:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/delete.go:114:11
+../structures/rbtree/delete.go:25:30: parameter rbtree.node leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:25:30:   flow: {heap} = rbtree.node:
+../structures/rbtree/delete.go:25:30:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, (*[73]uintptr)(rbtree..dict[1]), rbtree.node, rbtree.nodeSide, rbtree.node.Parent) (call parameter) at ../structures/rbtree/delete.go:31:10
+../structures/rbtree/delete.go:25:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:25:7:   flow: {temp} = rbtree.t:
+../structures/rbtree/delete.go:25:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, (*[73]uintptr)(rbtree..dict[1]), rbtree.node, rbtree.nodeSide, rbtree.node.Parent) (call parameter) at ../structures/rbtree/delete.go:31:10
+../structures/rbtree/delete.go:25:7:   flow: {heap} = *{temp}:
+./delete.go:12:37: parameter node leaks to {heap} with derefs=0:
+./delete.go:12:37:   flow: {heap} = node:
+./delete.go:12:37:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], node) (call parameter) at ./delete.go:14:24
+./delete.go:12:7: parameter b leaks to {heap} with derefs=2:
+./delete.go:12:7:   flow: {temp} = *b:
+./delete.go:12:7:     from b.priceTree (dot of pointer) at ./delete.go:14:3
+./delete.go:12:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], node) (call parameter) at ./delete.go:14:24
+./delete.go:12:7:   flow: {heap} = *{temp}:
+./delete.go:12:7: leaking param content: b
+./delete.go:12:37: leaking param: node
+./delete.go:22:7: parameter b leaks to {heap} with derefs=2:
+./delete.go:22:7:   flow: b = b:
+./delete.go:22:7:     from b, node := b, priceNode (assign-pair) at ./delete.go:38:20
+./delete.go:22:7:   flow: {temp} = *b:
+./delete.go:22:7:     from b.priceTree (dot of pointer) at ./delete.go:38:20
+./delete.go:22:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], node) (call parameter) at ./delete.go:38:20
+./delete.go:22:7:   flow: {heap} = *{temp}:
+./delete.go:33:67: o.ID escapes to heap:
+./delete.go:33:67:   flow: {storage for ... argument} = &{storage for o.ID}:
+./delete.go:33:67:     from o.ID (spill) at ./delete.go:33:67
+./delete.go:33:67:     from ... argument (slice-literal-element) at ./delete.go:33:20
+./delete.go:33:67:   flow: {heap} = {storage for ... argument}:
+./delete.go:33:67:     from ... argument (spill) at ./delete.go:33:20
+./delete.go:33:67:     from fmt.Errorf("OrderBook.Delete(%q) failed to remove: %w", ... argument...) (call parameter) at ./delete.go:33:20
+./delete.go:22:28: parameter o leaks to {heap} with derefs=1:
+./delete.go:22:28:   flow: {heap} = *o:
+./delete.go:22:28:     from o.ID (dot of pointer) at ./delete.go:32:35
+./delete.go:22:28:     from (*pricelevel.PriceLevel).Remove(priceNode.Data, o.ID) (call parameter) at ./delete.go:32:33
+./delete.go:29:81: o.Price escapes to heap:
+./delete.go:29:81:   flow: {storage for ... argument} = &{storage for o.Price}:
+./delete.go:29:81:     from o.Price (spill) at ./delete.go:29:81
+./delete.go:29:81:     from ... argument (slice-literal-element) at ./delete.go:29:20
+./delete.go:29:81:   flow: {heap} = {storage for ... argument}:
+./delete.go:29:81:     from ... argument (spill) at ./delete.go:29:20
+./delete.go:29:81:     from fmt.Errorf("OrderBook.Delete(%q) price node %d does not exist", ... argument...) (call parameter) at ./delete.go:29:20
+./delete.go:29:75: o.ID escapes to heap:
+./delete.go:29:75:   flow: {storage for ... argument} = &{storage for o.ID}:
+./delete.go:29:75:     from o.ID (spill) at ./delete.go:29:75
+./delete.go:29:75:     from ... argument (slice-literal-element) at ./delete.go:29:20
+./delete.go:29:75:   flow: {heap} = {storage for ... argument}:
+./delete.go:29:75:     from ... argument (spill) at ./delete.go:29:20
+./delete.go:29:75:     from fmt.Errorf("OrderBook.Delete(%q) price node %d does not exist", ... argument...) (call parameter) at ./delete.go:29:20
+./delete.go:24:83: o.Side escapes to heap:
+./delete.go:24:83:   flow: {storage for ... argument} = &{storage for o.Side}:
+./delete.go:24:83:     from o.Side (spill) at ./delete.go:24:83
+./delete.go:24:83:     from ... argument (slice-literal-element) at ./delete.go:24:20
+./delete.go:24:83:   flow: {heap} = {storage for ... argument}:
+./delete.go:24:83:     from ... argument (spill) at ./delete.go:24:20
+./delete.go:24:83:     from fmt.Errorf("OrderBook.Delete(%q) different sides %v!=%v", ... argument...) (call parameter) at ./delete.go:24:20
+./delete.go:24:75: b.side escapes to heap:
+./delete.go:24:75:   flow: {storage for ... argument} = &{storage for b.side}:
+./delete.go:24:75:     from b.side (spill) at ./delete.go:24:75
+./delete.go:24:75:     from ... argument (slice-literal-element) at ./delete.go:24:20
+./delete.go:24:75:   flow: {heap} = {storage for ... argument}:
+./delete.go:24:75:     from ... argument (spill) at ./delete.go:24:20
+./delete.go:24:75:     from fmt.Errorf("OrderBook.Delete(%q) different sides %v!=%v", ... argument...) (call parameter) at ./delete.go:24:20
+./delete.go:24:69: o.ID escapes to heap:
+./delete.go:24:69:   flow: {storage for ... argument} = &{storage for o.ID}:
+./delete.go:24:69:     from o.ID (spill) at ./delete.go:24:69
+./delete.go:24:69:     from ... argument (slice-literal-element) at ./delete.go:24:20
+./delete.go:24:69:   flow: {heap} = {storage for ... argument}:
+./delete.go:24:69:     from ... argument (spill) at ./delete.go:24:20
+./delete.go:24:69:     from fmt.Errorf("OrderBook.Delete(%q) different sides %v!=%v", ... argument...) (call parameter) at ./delete.go:24:20
+./delete.go:22:28: parameter o leaks to {storage for o.ID} with derefs=1:
+./delete.go:22:28:   flow: {storage for o.ID} = *o:
+./delete.go:22:28:     from o.ID (dot of pointer) at ./delete.go:33:67
+./delete.go:22:28:     from o.ID (interface-converted) at ./delete.go:33:67
+./delete.go:22:28: parameter o leaks to {storage for o.ID} with derefs=1:
+./delete.go:22:28:   flow: {storage for o.ID} = *o:
+./delete.go:22:28:     from o.ID (dot of pointer) at ./delete.go:29:75
+./delete.go:22:28:     from o.ID (interface-converted) at ./delete.go:29:75
+./delete.go:22:28: parameter o leaks to {storage for o.ID} with derefs=1:
+./delete.go:22:28:   flow: {storage for o.ID} = *o:
+./delete.go:22:28:     from o.ID (dot of pointer) at ./delete.go:24:69
+./delete.go:22:28:     from o.ID (interface-converted) at ./delete.go:24:69
+./delete.go:22:7: leaking param content: b
+./delete.go:22:28: leaking param content: o
+./delete.go:24:20: ... argument does not escape
+./delete.go:24:69: o.ID escapes to heap
+./delete.go:24:75: b.side escapes to heap
+./delete.go:24:83: o.Side escapes to heap
+./delete.go:29:20: ... argument does not escape
+./delete.go:29:75: o.ID escapes to heap
+./delete.go:29:81: o.Price escapes to heap
+./delete.go:33:20: ... argument does not escape
+./delete.go:33:67: o.ID escapes to heap
+./head.go:8:7: o does not escape
+../structures/rbtree/insert.go:12:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/insert.go:12:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/insert.go:12:7:     from rbtree.t, rbtree..dict, rbtree.value := rbtree.t, (*[73]uintptr)(rbtree..dict[5]), rbtree.value (assign-pair) at ../structures/rbtree/insert.go:13:32
+../structures/rbtree/insert.go:12:7:   flow: rbtree.parent = *rbtree.t:
+../structures/rbtree/insert.go:12:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/insert.go:13:32
+../structures/rbtree/insert.go:12:7:     from rbtree.parent = rbtree.t.Root (assign) at ../structures/rbtree/insert.go:13:32
+../structures/rbtree/insert.go:12:7:   flow: .autotmp_9 = rbtree.parent:
+../structures/rbtree/insert.go:12:7:   flow: rbtree.parent = .autotmp_9:
+../structures/rbtree/insert.go:12:7:     from rbtree.holder, rbtree.side, rbtree.parent := (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }])(.autotmp_7), .autotmp_8, .autotmp_9 (assign-pair) at ../structures/rbtree/insert.go:13:23
+../structures/rbtree/insert.go:12:7:   flow: {heap} = rbtree.parent:
+../structures/rbtree/insert.go:12:7:     from rbtree.holder.Parent = rbtree.parent (assign) at ../structures/rbtree/insert.go:42:16
+../structures/rbtree/insert.go:12:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/insert.go:12:7:   flow: rbtree.~r0 = *rbtree.t:
+../structures/rbtree/insert.go:12:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/insert.go:33:11
+../structures/rbtree/insert.go:12:7:     from return rbtree.t.Root (return) at ../structures/rbtree/insert.go:33:3
+./insert.go:12:7: parameter b leaks to {heap} with derefs=2:
+./insert.go:12:7:   flow: {temp} = *b:
+./insert.go:12:7:     from b.priceTree (dot of pointer) at ./insert.go:18:16
+./insert.go:12:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Insert(b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], price) (call parameter) at ./insert.go:18:33
+./insert.go:12:7:   flow: {heap} = *{temp}:
+./insert.go:12:7: leaking param content: b
+./insert.go:31:28: parameter o leaks to {heap} with derefs=0:
+./insert.go:31:28:   flow: {heap} = o:
+./insert.go:31:28:     from (*pricelevel.PriceLevel).Insert(priceNode.Data, o) (call parameter) at ./insert.go:44:33
+./insert.go:31:7: parameter b leaks to {heap} with derefs=2:
+./insert.go:31:7:   flow: {temp} = b:
+./insert.go:31:7:     from (*OrderBook).insertPriceNode(b, o.Price) (call parameter) at ./insert.go:39:40
+./insert.go:31:7:   flow: {heap} = **{temp}:
+./insert.go:33:83: o.Side escapes to heap:
+./insert.go:33:83:   flow: {storage for ... argument} = &{storage for o.Side}:
+./insert.go:33:83:     from o.Side (spill) at ./insert.go:33:83
+./insert.go:33:83:     from ... argument (slice-literal-element) at ./insert.go:33:20
+./insert.go:33:83:   flow: {heap} = {storage for ... argument}:
+./insert.go:33:83:     from ... argument (spill) at ./insert.go:33:20
+./insert.go:33:83:     from fmt.Errorf("OrderBook.Insert(%q) different sides %v!=%v", ... argument...) (call parameter) at ./insert.go:33:20
+./insert.go:33:75: b.side escapes to heap:
+./insert.go:33:75:   flow: {storage for ... argument} = &{storage for b.side}:
+./insert.go:33:75:     from b.side (spill) at ./insert.go:33:75
+./insert.go:33:75:     from ... argument (slice-literal-element) at ./insert.go:33:20
+./insert.go:33:75:   flow: {heap} = {storage for ... argument}:
+./insert.go:33:75:     from ... argument (spill) at ./insert.go:33:20
+./insert.go:33:75:     from fmt.Errorf("OrderBook.Insert(%q) different sides %v!=%v", ... argument...) (call parameter) at ./insert.go:33:20
+./insert.go:33:69: o.ID escapes to heap:
+./insert.go:33:69:   flow: {storage for ... argument} = &{storage for o.ID}:
+./insert.go:33:69:     from o.ID (spill) at ./insert.go:33:69
+./insert.go:33:69:     from ... argument (slice-literal-element) at ./insert.go:33:20
+./insert.go:33:69:   flow: {heap} = {storage for ... argument}:
+./insert.go:33:69:     from ... argument (spill) at ./insert.go:33:20
+./insert.go:33:69:     from fmt.Errorf("OrderBook.Insert(%q) different sides %v!=%v", ... argument...) (call parameter) at ./insert.go:33:20
+./insert.go:31:28: parameter o leaks to {storage for o.ID} with derefs=1:
+./insert.go:31:28:   flow: {storage for o.ID} = *o:
+./insert.go:31:28:     from o.ID (dot of pointer) at ./insert.go:33:69
+./insert.go:31:28:     from o.ID (interface-converted) at ./insert.go:33:69
+./insert.go:31:7: leaking param content: b
+./insert.go:31:28: leaking param: o
+./insert.go:33:20: ... argument does not escape
+./insert.go:33:69: o.ID escapes to heap
+./insert.go:33:75: b.side escapes to heap
+./insert.go:33:83: o.Side escapes to heap
+./match.go:11:7: parameter b leaks to {heap} with derefs=2:
+./match.go:11:7:   flow: rbtree.t = *b:
+./match.go:11:7:     from b.priceTree (dot of pointer) at ./match.go:16:12
+./match.go:11:7:     from rbtree.t, rbtree..dict := b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel] (assign-pair) at ./match.go:16:27
+./match.go:11:7:   flow: ~r0 = *rbtree.t:
+./match.go:11:7:     from rbtree.t.head (dot of pointer) at ./match.go:16:27
+./match.go:11:7:     from ~r0 = rbtree.t.head (assign-pair) at ./match.go:16:27
+./match.go:11:7:   flow: head = ~r0:
+./match.go:11:7:     from head := ~r0 (assign) at ./match.go:16:8
+./match.go:11:7:   flow: node = head:
+./match.go:11:7:     from b, node := b, head (assign-pair) at ./match.go:25:21
+./match.go:11:7:   flow: {heap} = node:
+./match.go:11:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(b.priceTree, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], node) (call parameter) at ./match.go:25:21
+./match.go:12:22: make([]*order.Match, 0, 10) escapes to heap:
+./match.go:12:22:   flow: totalMatches = &{storage for make([]*order.Match, 0, 10)}:
+./match.go:12:22:     from make([]*order.Match, 0, 10) (spill) at ./match.go:12:22
+./match.go:12:22:     from totalMatches := make([]*order.Match, 0, 10) (assign) at ./match.go:12:15
+./match.go:12:22:   flow: ~r0 = totalMatches:
+./match.go:12:22:     from return totalMatches, volume (return) at ./match.go:30:2
+./match.go:11:7: leaking param content: b
+./match.go:12:22: make([]*order.Match, 0, 10) escapes to heap
+./orderbook.go:32:9: &OrderBook{...} escapes to heap:
+./orderbook.go:32:9:   flow: ~r0 = &{storage for &OrderBook{...}}:
+./orderbook.go:32:9:     from &OrderBook{...} (spill) at ./orderbook.go:32:9
+./orderbook.go:32:9:     from return &OrderBook{...} (return) at ./orderbook.go:32:2
+./orderbook.go:26:53: parameter volumeUpdateCallback leaks to {storage for &OrderBook{...}} with derefs=0:
+./orderbook.go:26:53:   flow: {storage for &OrderBook{...}} = volumeUpdateCallback:
+./orderbook.go:26:53:     from OrderBook{...} (struct literal element) at ./orderbook.go:32:19
+./orderbook.go:35:29: make(map[uint64]*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) escapes to heap:
+./orderbook.go:35:29:   flow: {storage for &OrderBook{...}} = &{storage for make(map[uint64]*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel])}:
+./orderbook.go:35:29:     from make(map[uint64]*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) (spill) at ./orderbook.go:35:29
+./orderbook.go:35:29:     from OrderBook{...} (struct literal element) at ./orderbook.go:32:19
+./orderbook.go:34:62: &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} escapes to heap:
+./orderbook.go:34:62:   flow: rbtree.t = &{storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}}:
+./orderbook.go:34:62:     from &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (spill) at ./orderbook.go:34:62
+./orderbook.go:34:62:     from rbtree.t := &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (assign) at ./orderbook.go:34:62
+./orderbook.go:34:62:   flow: ~r0 = rbtree.t:
+./orderbook.go:34:62:     from ~r0 = rbtree.t (assign-pair) at ./orderbook.go:34:62
+./orderbook.go:34:62:   flow: {storage for &OrderBook{...}} = ~r0:
+./orderbook.go:34:62:     from OrderBook{...} (struct literal element) at ./orderbook.go:32:19
+./orderbook.go:26:32: parameter nodePool leaks to {storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} with derefs=0:
+./orderbook.go:26:32:   flow: rbtree.pool = nodePool:
+./orderbook.go:26:32:     from rbtree..dict, rbtree.orientation, rbtree.pool := &rbtree..dict.NewTree[exchange/engine/orderbook/pricelevel.PriceLevel], treeOrientation, nodePool (assign-pair) at ./orderbook.go:34:62
+./orderbook.go:26:32:   flow: {storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} = rbtree.pool:
+./orderbook.go:26:32:     from rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (struct literal element) at ./orderbook.go:34:62
+./orderbook.go:26:32: leaking param: nodePool
+./orderbook.go:26:53: leaking param: volumeUpdateCallback
+./orderbook.go:32:9: &OrderBook{...} escapes to heap
+./orderbook.go:34:62: &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} escapes to heap
+./orderbook.go:35:29: make(map[uint64]*rbtree.Node[exchange/engine/orderbook/pricelevel.PriceLevel]) escapes to heap
+./snapshot.go:7:17: make(map[uint64]uint64, len(o.priceMap)) escapes to heap:
+./snapshot.go:7:17:   flow: volumes = &{storage for make(map[uint64]uint64, len(o.priceMap))}:
+./snapshot.go:7:17:     from make(map[uint64]uint64, len(o.priceMap)) (spill) at ./snapshot.go:7:17
+./snapshot.go:7:17:     from volumes := make(map[uint64]uint64, len(o.priceMap)) (assign) at ./snapshot.go:7:10
+./snapshot.go:7:17:   flow: ~r0 = volumes:
+./snapshot.go:7:17:     from return volumes (return) at ./snapshot.go:12:2
+./snapshot.go:6:7: o does not escape
+./snapshot.go:7:17: make(map[uint64]uint64, len(o.priceMap)) escapes to heap
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42: parameter atomic.new leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42:   flow: {heap} = atomic.new:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42:     from atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:64:30
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37: parameter atomic.old leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37:   flow: {heap} = atomic.old:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37:     from atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:64:30
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:64:33
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:64:31
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:64:30
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27: parameter atomic.new leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27:   flow: {heap} = atomic.new:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27:     from atomic.SwapPointer(&atomic.x.v, unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:69
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:72
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:70
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from atomic.SwapPointer(&atomic.x.v, unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:69
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28: parameter atomic.val leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28:   flow: {heap} = atomic.val:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28:     from atomic.StorePointer(&atomic.x.v, unsafe.Pointer(atomic.val)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:50
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:53
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:51
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from atomic.StorePointer(&atomic.x.v, unsafe.Pointer(atomic.val)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:50
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:60
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:58
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from atomic.LoadPointer(&atomic.x.v) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:57
+../structures/rbtree/validate.go:94:129: rbtree.node.Value escapes to heap:
+../structures/rbtree/validate.go:94:129:   flow: {storage for ... argument} = &{storage for rbtree.node.Value}:
+../structures/rbtree/validate.go:94:129:     from rbtree.node.Value (spill) at ../structures/rbtree/validate.go:94:129
+../structures/rbtree/validate.go:94:129:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:129:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:94:129:     from ... argument (spill) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:129:     from fmt.Errorf("invalid tree: unequal black counts, want %d, got %d, from root to %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:108: rbtree.blackPathLength escapes to heap:
+../structures/rbtree/validate.go:94:108:   flow: {storage for ... argument} = &{storage for rbtree.blackPathLength}:
+../structures/rbtree/validate.go:94:108:     from rbtree.blackPathLength (spill) at ../structures/rbtree/validate.go:94:108
+../structures/rbtree/validate.go:94:108:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:108:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:94:108:     from ... argument (spill) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:108:     from fmt.Errorf("invalid tree: unequal black counts, want %d, got %d, from root to %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:96: rbtree.blackCount escapes to heap:
+../structures/rbtree/validate.go:94:96:   flow: {storage for ... argument} = &{storage for rbtree.blackCount}:
+../structures/rbtree/validate.go:94:96:     from rbtree.blackCount (spill) at ../structures/rbtree/validate.go:94:96
+../structures/rbtree/validate.go:94:96:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:96:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:94:96:     from ... argument (spill) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:94:96:     from fmt.Errorf("invalid tree: unequal black counts, want %d, got %d, from root to %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:94:23
+../structures/rbtree/validate.go:11:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/validate.go:11:7:   flow: {storage for []*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} = *rbtree.t:
+../structures/rbtree/validate.go:11:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/validate.go:25:23
+../structures/rbtree/validate.go:11:7:     from []*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (slice-literal-element) at ../structures/rbtree/validate.go:25:21
+../structures/rbtree/validate.go:11:7:   flow: rbtree.stack = &{storage for []*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}}:
+../structures/rbtree/validate.go:11:7:     from []*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (spill) at ../structures/rbtree/validate.go:25:21
+../structures/rbtree/validate.go:11:7:     from rbtree.stack := []*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (assign) at ../structures/rbtree/validate.go:25:8
+../structures/rbtree/validate.go:11:7:   flow: {temp} = rbtree.stack:
+../structures/rbtree/validate.go:11:7:     from append(rbtree.stack, rbtree.node.Left) (call parameter) at ../structures/rbtree/validate.go:81:19
+../structures/rbtree/validate.go:11:7:   flow: {heap} = *{temp}:
+../structures/rbtree/validate.go:11:7:     from append(rbtree.stack, rbtree.node.Left) (appendee slice) at ../structures/rbtree/validate.go:81:19
+../structures/rbtree/validate.go:78:107: rbtree.node.Right.Value escapes to heap:
+../structures/rbtree/validate.go:78:107:   flow: {storage for ... argument} = &{storage for rbtree.node.Right.Value}:
+../structures/rbtree/validate.go:78:107:     from rbtree.node.Right.Value (spill) at ../structures/rbtree/validate.go:78:107
+../structures/rbtree/validate.go:78:107:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:78:23
+../structures/rbtree/validate.go:78:107:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:78:107:     from ... argument (spill) at ../structures/rbtree/validate.go:78:23
+../structures/rbtree/validate.go:78:107:     from fmt.Errorf("invalid tree: left child not referencing parent: %d <- %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:78:23
+../structures/rbtree/validate.go:78:89: rbtree.node.Value escapes to heap:
+../structures/rbtree/validate.go:78:89:   flow: {storage for ... argument} = &{storage for rbtree.node.Value}:
+../structures/rbtree/validate.go:78:89:     from rbtree.node.Value (spill) at ../structures/rbtree/validate.go:78:89
+../structures/rbtree/validate.go:78:89:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:78:23
+../structures/rbtree/validate.go:78:89:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:78:89:     from ... argument (spill) at ../structures/rbtree/validate.go:78:23
+../structures/rbtree/validate.go:78:89:     from fmt.Errorf("invalid tree: left child not referencing parent: %d <- %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:78:23
+../structures/rbtree/validate.go:64:108: rbtree.node.Right.Value escapes to heap:
+../structures/rbtree/validate.go:64:108:   flow: {storage for ... argument} = &{storage for rbtree.node.Right.Value}:
+../structures/rbtree/validate.go:64:108:     from rbtree.node.Right.Value (spill) at ../structures/rbtree/validate.go:64:108
+../structures/rbtree/validate.go:64:108:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:64:23
+../structures/rbtree/validate.go:64:108:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:64:108:     from ... argument (spill) at ../structures/rbtree/validate.go:64:23
+../structures/rbtree/validate.go:64:108:     from fmt.Errorf("invalid tree: right child not referencing parent: %d <- %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:64:23
+../structures/rbtree/validate.go:64:90: rbtree.node.Value escapes to heap:
+../structures/rbtree/validate.go:64:90:   flow: {storage for ... argument} = &{storage for rbtree.node.Value}:
+../structures/rbtree/validate.go:64:90:     from rbtree.node.Value (spill) at ../structures/rbtree/validate.go:64:90
+../structures/rbtree/validate.go:64:90:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:64:23
+../structures/rbtree/validate.go:64:90:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:64:90:     from ... argument (spill) at ../structures/rbtree/validate.go:64:23
+../structures/rbtree/validate.go:64:90:     from fmt.Errorf("invalid tree: right child not referencing parent: %d <- %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:64:23
+../structures/rbtree/validate.go:58:105: rbtree.node.Value escapes to heap:
+../structures/rbtree/validate.go:58:105:   flow: {storage for ... argument} = &{storage for rbtree.node.Value}:
+../structures/rbtree/validate.go:58:105:     from rbtree.node.Value (spill) at ../structures/rbtree/validate.go:58:105
+../structures/rbtree/validate.go:58:105:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:58:23
+../structures/rbtree/validate.go:58:105:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:58:105:     from ... argument (spill) at ../structures/rbtree/validate.go:58:23
+../structures/rbtree/validate.go:58:105:     from fmt.Errorf("invalid tree: right child is not bigger than: %d -> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:58:23
+../structures/rbtree/validate.go:58:93: rbtree.node.Parent.Value escapes to heap:
+../structures/rbtree/validate.go:58:93:   flow: {storage for ... argument} = &{storage for rbtree.node.Parent.Value}:
+../structures/rbtree/validate.go:58:93:     from rbtree.node.Parent.Value (spill) at ../structures/rbtree/validate.go:58:93
+../structures/rbtree/validate.go:58:93:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:58:23
+../structures/rbtree/validate.go:58:93:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:58:93:     from ... argument (spill) at ../structures/rbtree/validate.go:58:23
+../structures/rbtree/validate.go:58:93:     from fmt.Errorf("invalid tree: right child is not bigger than: %d -> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:58:23
+../structures/rbtree/validate.go:54:102: rbtree.node.Value escapes to heap:
+../structures/rbtree/validate.go:54:102:   flow: {storage for ... argument} = &{storage for rbtree.node.Value}:
+../structures/rbtree/validate.go:54:102:     from rbtree.node.Value (spill) at ../structures/rbtree/validate.go:54:102
+../structures/rbtree/validate.go:54:102:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:54:23
+../structures/rbtree/validate.go:54:102:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:54:102:     from ... argument (spill) at ../structures/rbtree/validate.go:54:23
+../structures/rbtree/validate.go:54:102:     from fmt.Errorf("invalid tree: left child is not less than: %d -> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:54:23
+../structures/rbtree/validate.go:54:90: rbtree.node.Parent.Value escapes to heap:
+../structures/rbtree/validate.go:54:90:   flow: {storage for ... argument} = &{storage for rbtree.node.Parent.Value}:
+../structures/rbtree/validate.go:54:90:     from rbtree.node.Parent.Value (spill) at ../structures/rbtree/validate.go:54:90
+../structures/rbtree/validate.go:54:90:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:54:23
+../structures/rbtree/validate.go:54:90:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:54:90:     from ... argument (spill) at ../structures/rbtree/validate.go:54:23
+../structures/rbtree/validate.go:54:90:     from fmt.Errorf("invalid tree: left child is not less than: %d -> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:54:23
+../structures/rbtree/validate.go:49:113: rbtree.node.Value escapes to heap:
+../structures/rbtree/validate.go:49:113:   flow: {storage for ... argument} = &{storage for rbtree.node.Value}:
+../structures/rbtree/validate.go:49:113:     from rbtree.node.Value (spill) at ../structures/rbtree/validate.go:49:113
+../structures/rbtree/validate.go:49:113:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:113:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:49:113:     from ... argument (spill) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:113:     from fmt.Errorf("invalid tree: two directly related red nodes: %d -%s-> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:103: rbtree.side escapes to heap:
+../structures/rbtree/validate.go:49:103:   flow: {storage for ... argument} = &{storage for rbtree.side}:
+../structures/rbtree/validate.go:49:103:     from rbtree.side (spill) at ../structures/rbtree/validate.go:49:103
+../structures/rbtree/validate.go:49:103:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:103:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:49:103:     from ... argument (spill) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:103:     from fmt.Errorf("invalid tree: two directly related red nodes: %d -%s-> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:95: rbtree.node.Parent.Value escapes to heap:
+../structures/rbtree/validate.go:49:95:   flow: {storage for ... argument} = &{storage for rbtree.node.Parent.Value}:
+../structures/rbtree/validate.go:49:95:     from rbtree.node.Parent.Value (spill) at ../structures/rbtree/validate.go:49:95
+../structures/rbtree/validate.go:49:95:     from ... argument (slice-literal-element) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:95:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/validate.go:49:95:     from ... argument (spill) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:49:95:     from fmt.Errorf("invalid tree: two directly related red nodes: %d -%s-> %d", ... argument...) (call parameter) at ../structures/rbtree/validate.go:49:22
+../structures/rbtree/validate.go:24:30: map[*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]]bool{} does not escape
+../structures/rbtree/validate.go:25:21: []*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} does not escape
+../structures/rbtree/validate.go:26:21: []int{...} does not escape
+../structures/rbtree/validate.go:49:22: ... argument does not escape
+../structures/rbtree/validate.go:49:95: rbtree.node.Parent.Value escapes to heap
+../structures/rbtree/validate.go:49:103: rbtree.side escapes to heap
+../structures/rbtree/validate.go:49:113: rbtree.node.Value escapes to heap
+../structures/rbtree/validate.go:54:23: ... argument does not escape
+../structures/rbtree/validate.go:54:90: rbtree.node.Parent.Value escapes to heap
+../structures/rbtree/validate.go:54:102: rbtree.node.Value escapes to heap
+../structures/rbtree/validate.go:58:23: ... argument does not escape
+../structures/rbtree/validate.go:58:93: rbtree.node.Parent.Value escapes to heap
+../structures/rbtree/validate.go:58:105: rbtree.node.Value escapes to heap
+../structures/rbtree/validate.go:64:23: ... argument does not escape
+../structures/rbtree/validate.go:64:90: rbtree.node.Value escapes to heap
+../structures/rbtree/validate.go:64:108: rbtree.node.Right.Value escapes to heap
+../structures/rbtree/validate.go:78:23: ... argument does not escape
+../structures/rbtree/validate.go:78:89: rbtree.node.Value escapes to heap
+../structures/rbtree/validate.go:78:107: rbtree.node.Right.Value escapes to heap
+../structures/rbtree/validate.go:94:23: ... argument does not escape
+../structures/rbtree/validate.go:94:96: rbtree.blackCount escapes to heap
+../structures/rbtree/validate.go:94:108: rbtree.blackPathLength escapes to heap
+../structures/rbtree/validate.go:94:129: rbtree.node.Value escapes to heap
+../structures/rbtree/tree.go:60:27: parameter rbtree.n leaks to {heap} with derefs=0:
+../structures/rbtree/tree.go:60:27:   flow: {heap} = rbtree.n:
+../structures/rbtree/tree.go:60:27:     from rbtree.n (interface-converted) at ../structures/rbtree/tree.go:63:13
+../structures/rbtree/tree.go:60:27:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/tree.go:63:12
+../structures/rbtree/tree.go:60:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/tree.go:60:7:   flow: {heap} = *rbtree.t:
+../structures/rbtree/tree.go:60:7:     from rbtree.t.pool (dot of pointer) at ../structures/rbtree/tree.go:63:3
+../structures/rbtree/tree.go:60:7:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/tree.go:63:12
+../structures/rbtree/tree.go:56:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/tree.go:56:7:   flow: {heap} = *rbtree.t:
+../structures/rbtree/tree.go:56:7:     from rbtree.t.pool (dot of pointer) at ../structures/rbtree/tree.go:57:10
+../structures/rbtree/tree.go:56:7:     from (*sync.Pool).Get(rbtree.t.pool) (call parameter) at ../structures/rbtree/tree.go:57:19
+../structures/rbtree/node.go:33:18: ([]byte)("BLK") does not escape
+../structures/rbtree/node.go:33:18: zero-copy string->[]byte conversion
+../structures/rbtree/node.go:35:18: ([]byte)("RED") does not escape
+../structures/rbtree/node.go:35:18: zero-copy string->[]byte conversion
+../structures/rbtree/node.go:64:12: make([]byte, 0, 20) does not escape
+../structures/rbtree/node.go:72:13: make([]byte, 0, 20) does not escape
+../structures/rbtree/node.go:89:12: make([]byte, 0, 20) does not escape
+../structures/rbtree/node.go:95:13: make([]byte, 0, 20) does not escape
+../structures/rbtree/tree.go:41:35: []byte{} does not escape
+../structures/rbtree/tree.go:41:45: []byte{} does not escape
+../structures/rbtree/transplant.go:6:30: parameter rbtree.current leaks to {heap} with derefs=1:
+../structures/rbtree/transplant.go:6:30:   flow: {heap} = *rbtree.current:
+../structures/rbtree/transplant.go:6:30:     from rbtree.current.Parent (dot of pointer) at ../structures/rbtree/transplant.go:16:23
+../structures/rbtree/transplant.go:6:30:     from rbtree.new.Parent = rbtree.current.Parent (assign) at ../structures/rbtree/transplant.go:16:14
+../structures/rbtree/transplant.go:6:48: parameter rbtree.new leaks to {heap} with derefs=0:
+../structures/rbtree/transplant.go:6:48:   flow: {heap} = rbtree.new:
+../structures/rbtree/transplant.go:6:48:     from rbtree.t.Root = rbtree.new (assign) at ../structures/rbtree/transplant.go:8:10
+../structures/rbtree/search.go:79:7: parameter rbtree.t leaks to rbtree.parent with derefs=1:
+../structures/rbtree/search.go:79:7:   flow: rbtree.parent = *rbtree.t:
+../structures/rbtree/search.go:79:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:88:12
+../structures/rbtree/search.go:79:7:     from rbtree.parent = rbtree.t.Root (assign) at ../structures/rbtree/search.go:88:9
+../structures/rbtree/search.go:79:7: parameter rbtree.t leaks to rbtree.holder with derefs=1:
+../structures/rbtree/search.go:79:7:   flow: rbtree.holder = *rbtree.t:
+../structures/rbtree/search.go:79:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:85:11
+../structures/rbtree/search.go:79:7:     from return rbtree.t.Root, rbtree.ChildSide(0), nil (return) at ../structures/rbtree/search.go:85:3
+../structures/rbtree/search.go:59:23: parameter rbtree.max leaks to rbtree.~r0 with derefs=0:
+../structures/rbtree/search.go:59:23:   flow: rbtree.~r0 = rbtree.max:
+../structures/rbtree/search.go:59:23:     from return rbtree.max (return) at ../structures/rbtree/search.go:66:4
+../structures/rbtree/search.go:46:23: parameter rbtree.min leaks to rbtree.~r0 with derefs=0:
+../structures/rbtree/search.go:46:23:   flow: rbtree.~r0 = rbtree.min:
+../structures/rbtree/search.go:46:23:     from return rbtree.min (return) at ../structures/rbtree/search.go:53:4
+../structures/rbtree/search.go:40:61: rbtree.value escapes to heap:
+../structures/rbtree/search.go:40:61:   flow: {storage for ... argument} = &{storage for rbtree.value}:
+../structures/rbtree/search.go:40:61:     from rbtree.value (spill) at ../structures/rbtree/search.go:40:61
+../structures/rbtree/search.go:40:61:     from ... argument (slice-literal-element) at ../structures/rbtree/search.go:40:25
+../structures/rbtree/search.go:40:61:   flow: {heap} = {storage for ... argument}:
+../structures/rbtree/search.go:40:61:     from ... argument (spill) at ../structures/rbtree/search.go:40:25
+../structures/rbtree/search.go:40:61:     from fmt.Errorf("value %v does not exist in tree", ... argument...) (call parameter) at ../structures/rbtree/search.go:40:25
+../structures/rbtree/search.go:37:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:37:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/search.go:37:7:     from rbtree.t, rbtree..dict, rbtree.value := rbtree.t, (*[73]uintptr)(rbtree..dict[9]), rbtree.value (assign-pair) at ../structures/rbtree/search.go:38:22
+../structures/rbtree/search.go:37:7:   flow: rbtree.holder = *rbtree.t:
+../structures/rbtree/search.go:37:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:38:22
+../structures/rbtree/search.go:37:7:     from rbtree.holder, rbtree.side, rbtree.parent = rbtree.t.Root, rbtree.ChildSide(0), nil (assign-pair) at ../structures/rbtree/search.go:38:22
+../structures/rbtree/search.go:37:7:   flow: .autotmp_6 = rbtree.holder:
+../structures/rbtree/search.go:37:7:   flow: rbtree.node = .autotmp_6:
+../structures/rbtree/search.go:37:7:     from rbtree.node, _, _ := (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }])(.autotmp_6), .autotmp_7, .autotmp_8 (assign-pair) at ../structures/rbtree/search.go:38:13
+../structures/rbtree/search.go:37:7:   flow: rbtree.~r0 = rbtree.node:
+../structures/rbtree/search.go:37:7:     from return rbtree.node, nil (return) at ../structures/rbtree/search.go:43:2
+../structures/rbtree/search.go:40:25: ... argument does not escape
+../structures/rbtree/search.go:40:61: rbtree.value escapes to heap
+../structures/rbtree/search.go:24:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:24:7:   flow: rbtree.~r0 = *rbtree.t:
+../structures/rbtree/search.go:24:7:     from rbtree.t.head (dot of pointer) at ../structures/rbtree/search.go:25:10
+../structures/rbtree/search.go:24:7:     from return rbtree.t.head (return) at ../structures/rbtree/search.go:25:2
+../structures/rbtree/search.go:17:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:17:7:   flow: rbtree.max = *rbtree.t:
+../structures/rbtree/search.go:17:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:18:16
+../structures/rbtree/search.go:17:7:     from rbtree.t, rbtree..dict, rbtree.max := rbtree.t, (*[73]uintptr)(rbtree..dict[8]), rbtree.t.Root (assign-pair) at ../structures/rbtree/search.go:18:14
+../structures/rbtree/search.go:17:7:   flow: rbtree.~r0 = rbtree.max:
+../structures/rbtree/search.go:17:7:     from rbtree.~r0 = rbtree.max (assign-pair) at ../structures/rbtree/search.go:18:14
+../structures/rbtree/search.go:17:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:17:7:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:18:2
+../structures/rbtree/search.go:10:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:10:7:   flow: rbtree.min = *rbtree.t:
+../structures/rbtree/search.go:10:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:11:16
+../structures/rbtree/search.go:10:7:     from rbtree.t, rbtree..dict, rbtree.min := rbtree.t, (*[73]uintptr)(rbtree..dict[7]), rbtree.t.Root (assign-pair) at ../structures/rbtree/search.go:11:14
+../structures/rbtree/search.go:10:7:   flow: rbtree.~r0 = rbtree.min:
+../structures/rbtree/search.go:10:7:     from rbtree.~r0 = rbtree.min (assign-pair) at ../structures/rbtree/search.go:11:14
+../structures/rbtree/search.go:10:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:10:7:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:11:2
+../structures/rbtree/rotate.go:45:31: parameter rbtree.x leaks to {heap} with derefs=0:
+../structures/rbtree/rotate.go:45:31:   flow: {heap} = rbtree.x:
+../structures/rbtree/rotate.go:45:31:     from rbtree.y.Right.Parent = rbtree.x (assign) at ../structures/rbtree/rotate.go:53:18
+../structures/rbtree/rotate.go:11:30: parameter rbtree.x leaks to {heap} with derefs=0:
+../structures/rbtree/rotate.go:11:30:   flow: {heap} = rbtree.x:
+../structures/rbtree/rotate.go:11:30:     from rbtree.y.Left.Parent = rbtree.x (assign) at ../structures/rbtree/rotate.go:23:17
+../structures/rbtree/delete.go:117:29: parameter rbtree.parent leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/delete.go:117:29:   flow: rbtree.~r0 = *rbtree.parent:
+../structures/rbtree/delete.go:117:29:     from rbtree.parent.Left (dot of pointer) at ../structures/rbtree/delete.go:122:16
+../structures/rbtree/delete.go:117:29:     from return rbtree.parent.Left (return) at ../structures/rbtree/delete.go:122:3
+../structures/rbtree/delete.go:11:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:11:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/delete.go:11:7:     from rbtree.t, rbtree..dict, rbtree.value := rbtree.t, (*[73]uintptr)(rbtree..dict[0]), rbtree.value (assign-pair) at ../structures/rbtree/delete.go:12:44
+../structures/rbtree/delete.go:11:7:   flow: rbtree.parent = *rbtree.t:
+../structures/rbtree/delete.go:11:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/delete.go:12:44
+../structures/rbtree/delete.go:11:7:     from rbtree.parent = rbtree.t.Root (assign) at ../structures/rbtree/delete.go:12:44
+../structures/rbtree/delete.go:11:7:   flow: .autotmp_8 = rbtree.parent:
+../structures/rbtree/delete.go:11:7:   flow: rbtree.holderParent = .autotmp_8:
+../structures/rbtree/delete.go:11:7:     from rbtree.holder, rbtree.holderSide, rbtree.holderParent := (*rbtree.Node[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }])(.autotmp_6), .autotmp_7, .autotmp_8 (assign-pair) at ../structures/rbtree/delete.go:12:35
+../structures/rbtree/delete.go:11:7:   flow: {heap} = rbtree.holderParent:
+../structures/rbtree/delete.go:11:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, (*[73]uintptr)(rbtree..dict[0]), rbtree.holder, rbtree.holderSide, rbtree.holderParent) (call parameter) at ../structures/rbtree/delete.go:14:10
+../structures/rbtree/tree.go:49:7: &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} escapes to heap:
+../structures/rbtree/tree.go:49:7:   flow: rbtree.t = &{storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}}:
+../structures/rbtree/tree.go:49:7:     from &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (spill) at ../structures/rbtree/tree.go:49:7
+../structures/rbtree/tree.go:49:7:     from rbtree.t := &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (assign) at ../structures/rbtree/tree.go:49:4
+../structures/rbtree/tree.go:49:7:   flow: rbtree.~r0 = rbtree.t:
+../structures/rbtree/tree.go:49:7:     from return rbtree.t (return) at ../structures/rbtree/tree.go:53:2
+../structures/rbtree/tree.go:48:50: parameter rbtree.pool leaks to {storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} with derefs=0:
+../structures/rbtree/tree.go:48:50:   flow: {storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} = rbtree.pool:
+../structures/rbtree/tree.go:48:50:     from rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (struct literal element) at ../structures/rbtree/tree.go:49:15
+../structures/rbtree/tree.go:49:7: &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} escapes to heap
+../structures/rbtree/tree.go:48:6: &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} escapes to heap:
+../structures/rbtree/tree.go:48:6:   flow: rbtree.t = &{storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}}:
+../structures/rbtree/tree.go:48:6:     from &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (spill) at ../structures/rbtree/tree.go:48:6
+../structures/rbtree/tree.go:48:6:     from rbtree.t := &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (assign) at ../structures/rbtree/tree.go:48:6
+../structures/rbtree/tree.go:48:6:   flow: rbtree.~r0 = rbtree.t:
+../structures/rbtree/tree.go:48:6:     from rbtree.~r0 = rbtree.t (assign-pair) at ../structures/rbtree/tree.go:48:6
+../structures/rbtree/tree.go:48:6:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/tree.go:48:6:     from return rbtree.~r0 (return) at ../structures/rbtree/tree.go:48:6
+../structures/rbtree/tree.go:48:50: parameter rbtree.pool leaks to {storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} with derefs=0:
+../structures/rbtree/tree.go:48:50:   flow: rbtree.pool = rbtree.pool:
+../structures/rbtree/tree.go:48:50:     from rbtree..dict, rbtree.orientation, rbtree.pool := &rbtree..dict.NewTree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.orientation, rbtree.pool (assign-pair) at ../structures/rbtree/tree.go:48:6
+../structures/rbtree/tree.go:48:50:   flow: {storage for &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...}} = rbtree.pool:
+../structures/rbtree/tree.go:48:50:     from rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} (struct literal element) at ../structures/rbtree/tree.go:48:6
+../structures/rbtree/tree.go:48:6: &rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]{...} escapes to heap
+../structures/rbtree/validate.go:11:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/validate.go:11:7:   flow: {heap} = *rbtree.t:
+../structures/rbtree/validate.go:11:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Valid(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel]) (call parameter) at ../structures/rbtree/validate.go:11:6
+../structures/rbtree/tree.go:60:27: parameter rbtree.n leaks to {heap} with derefs=0:
+../structures/rbtree/tree.go:60:27:   flow: rbtree.n = rbtree.n:
+../structures/rbtree/tree.go:60:27:     from rbtree.t, rbtree..dict, rbtree.n := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.n (assign-pair) at ../structures/rbtree/tree.go:60:6
+../structures/rbtree/tree.go:60:27:   flow: {heap} = rbtree.n:
+../structures/rbtree/tree.go:60:27:     from rbtree.n (interface-converted) at ../structures/rbtree/tree.go:60:6
+../structures/rbtree/tree.go:60:27:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/tree.go:60:6
+../structures/rbtree/tree.go:60:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/tree.go:60:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/tree.go:60:7:     from rbtree.t, rbtree..dict, rbtree.n := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.n (assign-pair) at ../structures/rbtree/tree.go:60:6
+../structures/rbtree/tree.go:60:7:   flow: {heap} = *rbtree.t:
+../structures/rbtree/tree.go:60:7:     from rbtree.t.pool (dot of pointer) at ../structures/rbtree/tree.go:60:6
+../structures/rbtree/tree.go:60:7:     from (*sync.Pool).Put(rbtree.t.pool, rbtree.n) (call parameter) at ../structures/rbtree/tree.go:60:6
+../structures/rbtree/tree.go:56:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/tree.go:56:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/tree.go:56:7:     from rbtree.t, rbtree..dict := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel] (assign-pair) at ../structures/rbtree/tree.go:56:6
+../structures/rbtree/tree.go:56:7:   flow: {heap} = *rbtree.t:
+../structures/rbtree/tree.go:56:7:     from rbtree.t.pool (dot of pointer) at ../structures/rbtree/tree.go:56:6
+../structures/rbtree/tree.go:56:7:     from (*sync.Pool).Get(rbtree.t.pool) (call parameter) at ../structures/rbtree/tree.go:56:6
+../structures/rbtree/transplant.go:6:30: parameter rbtree.current leaks to {heap} with derefs=1:
+../structures/rbtree/transplant.go:6:30:   flow: rbtree.current = rbtree.current:
+../structures/rbtree/transplant.go:6:30:     from rbtree.t, rbtree..dict, rbtree.current, rbtree.new := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.current, rbtree.new (assign-pair) at ../structures/rbtree/transplant.go:6:6
+../structures/rbtree/transplant.go:6:30:   flow: {heap} = *rbtree.current:
+../structures/rbtree/transplant.go:6:30:     from rbtree.current.Parent (dot of pointer) at ../structures/rbtree/transplant.go:6:6
+../structures/rbtree/transplant.go:6:30:     from rbtree.new.Parent = rbtree.current.Parent (assign) at ../structures/rbtree/transplant.go:6:6
+../structures/rbtree/transplant.go:6:48: parameter rbtree.new leaks to {heap} with derefs=0:
+../structures/rbtree/transplant.go:6:48:   flow: rbtree.new = rbtree.new:
+../structures/rbtree/transplant.go:6:48:     from rbtree.t, rbtree..dict, rbtree.current, rbtree.new := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.current, rbtree.new (assign-pair) at ../structures/rbtree/transplant.go:6:6
+../structures/rbtree/transplant.go:6:48:   flow: {heap} = rbtree.new:
+../structures/rbtree/transplant.go:6:48:     from rbtree.t.Root = rbtree.new (assign) at ../structures/rbtree/transplant.go:6:6
+../structures/rbtree/search.go:79:7: parameter rbtree.t leaks to rbtree.parent with derefs=1:
+../structures/rbtree/search.go:79:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/search.go:79:7:     from rbtree.t, rbtree..dict, rbtree.value := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value (assign-pair) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7:   flow: rbtree.parent = *rbtree.t:
+../structures/rbtree/search.go:79:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7:     from rbtree.parent = rbtree.t.Root (assign) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7:   flow: .autotmp_7 = rbtree.parent:
+../structures/rbtree/search.go:79:7:   flow: rbtree.parent = .autotmp_7:
+../structures/rbtree/search.go:79:7:     from return .autotmp_5, .autotmp_6, .autotmp_7 (return) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7: parameter rbtree.t leaks to rbtree.holder with derefs=1:
+../structures/rbtree/search.go:79:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/search.go:79:7:     from rbtree.t, rbtree..dict, rbtree.value := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value (assign-pair) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7:   flow: rbtree.holder = *rbtree.t:
+../structures/rbtree/search.go:79:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7:     from rbtree.holder, rbtree.side, rbtree.parent = rbtree.t.Root, rbtree.ChildSide(0), nil (assign-pair) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:79:7:   flow: .autotmp_5 = rbtree.holder:
+../structures/rbtree/search.go:79:7:   flow: rbtree.holder = .autotmp_5:
+../structures/rbtree/search.go:79:7:     from return .autotmp_5, .autotmp_6, .autotmp_7 (return) at ../structures/rbtree/search.go:79:6
+../structures/rbtree/search.go:59:23: parameter rbtree.max leaks to rbtree.~r0 with derefs=0:
+../structures/rbtree/search.go:59:23:   flow: rbtree.max = rbtree.max:
+../structures/rbtree/search.go:59:23:     from rbtree.t, rbtree..dict, rbtree.max := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.max (assign-pair) at ../structures/rbtree/search.go:59:6
+../structures/rbtree/search.go:59:23:   flow: rbtree.~r0 = rbtree.max:
+../structures/rbtree/search.go:59:23:     from rbtree.~r0 = rbtree.max (assign-pair) at ../structures/rbtree/search.go:59:6
+../structures/rbtree/search.go:59:23:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:59:23:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:59:6
+../structures/rbtree/search.go:46:23: parameter rbtree.min leaks to rbtree.~r0 with derefs=0:
+../structures/rbtree/search.go:46:23:   flow: rbtree.min = rbtree.min:
+../structures/rbtree/search.go:46:23:     from rbtree.t, rbtree..dict, rbtree.min := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.min (assign-pair) at ../structures/rbtree/search.go:46:6
+../structures/rbtree/search.go:46:23:   flow: rbtree.~r0 = rbtree.min:
+../structures/rbtree/search.go:46:23:     from rbtree.~r0 = rbtree.min (assign-pair) at ../structures/rbtree/search.go:46:6
+../structures/rbtree/search.go:46:23:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:46:23:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:46:6
+../structures/rbtree/search.go:37:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:37:7:   flow: .autotmp_4 = *rbtree.t:
+../structures/rbtree/search.go:37:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Get(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value) (call parameter) at ../structures/rbtree/search.go:37:6
+../structures/rbtree/search.go:37:7:   flow: rbtree.~r0 = .autotmp_4:
+../structures/rbtree/search.go:37:7:     from return .autotmp_4, .autotmp_5 (return) at ../structures/rbtree/search.go:37:6
+../structures/rbtree/search.go:24:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:24:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/search.go:24:7:     from rbtree.t, rbtree..dict := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel] (assign-pair) at ../structures/rbtree/search.go:24:6
+../structures/rbtree/search.go:24:7:   flow: rbtree.~r0 = *rbtree.t:
+../structures/rbtree/search.go:24:7:     from rbtree.t.head (dot of pointer) at ../structures/rbtree/search.go:24:6
+../structures/rbtree/search.go:24:7:     from rbtree.~r0 = rbtree.t.head (assign-pair) at ../structures/rbtree/search.go:24:6
+../structures/rbtree/search.go:24:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:24:7:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:24:6
+../structures/rbtree/search.go:17:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:17:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/search.go:17:7:     from rbtree.t, rbtree..dict := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel] (assign-pair) at ../structures/rbtree/search.go:17:6
+../structures/rbtree/search.go:17:7:   flow: rbtree.max = *rbtree.t:
+../structures/rbtree/search.go:17:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:17:6
+../structures/rbtree/search.go:17:7:     from rbtree.t, rbtree..dict, rbtree.max := rbtree.t, (*[73]uintptr)(rbtree..dict[8]), rbtree.t.Root (assign-pair) at ../structures/rbtree/search.go:17:6
+../structures/rbtree/search.go:17:7:   flow: rbtree.~r0 = rbtree.max:
+../structures/rbtree/search.go:17:7:     from rbtree.~r0 = rbtree.max (assign-pair) at ../structures/rbtree/search.go:17:6
+../structures/rbtree/search.go:17:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:17:7:     from rbtree.~r0 = rbtree.~r0 (assign-pair) at ../structures/rbtree/search.go:17:6
+../structures/rbtree/search.go:17:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:17:7:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:17:6
+../structures/rbtree/search.go:10:7: parameter rbtree.t leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/search.go:10:7:   flow: rbtree.t = rbtree.t:
+../structures/rbtree/search.go:10:7:     from rbtree.t, rbtree..dict := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel] (assign-pair) at ../structures/rbtree/search.go:10:6
+../structures/rbtree/search.go:10:7:   flow: rbtree.min = *rbtree.t:
+../structures/rbtree/search.go:10:7:     from rbtree.t.Root (dot of pointer) at ../structures/rbtree/search.go:10:6
+../structures/rbtree/search.go:10:7:     from rbtree.t, rbtree..dict, rbtree.min := rbtree.t, (*[73]uintptr)(rbtree..dict[7]), rbtree.t.Root (assign-pair) at ../structures/rbtree/search.go:10:6
+../structures/rbtree/search.go:10:7:   flow: rbtree.~r0 = rbtree.min:
+../structures/rbtree/search.go:10:7:     from rbtree.~r0 = rbtree.min (assign-pair) at ../structures/rbtree/search.go:10:6
+../structures/rbtree/search.go:10:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:10:7:     from rbtree.~r0 = rbtree.~r0 (assign-pair) at ../structures/rbtree/search.go:10:6
+../structures/rbtree/search.go:10:7:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/search.go:10:7:     from return rbtree.~r0 (return) at ../structures/rbtree/search.go:10:6
+../structures/rbtree/rotate.go:45:31: parameter rbtree.x leaks to {heap} with derefs=0:
+../structures/rbtree/rotate.go:45:31:   flow: rbtree.x = rbtree.x:
+../structures/rbtree/rotate.go:45:31:     from rbtree.t, rbtree..dict, rbtree.x := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x (assign-pair) at ../structures/rbtree/rotate.go:45:6
+../structures/rbtree/rotate.go:45:31:   flow: {heap} = rbtree.x:
+../structures/rbtree/rotate.go:45:31:     from rbtree.y.Right.Parent = rbtree.x (assign) at ../structures/rbtree/rotate.go:45:6
+../structures/rbtree/rotate.go:11:30: parameter rbtree.x leaks to {heap} with derefs=0:
+../structures/rbtree/rotate.go:11:30:   flow: rbtree.x = rbtree.x:
+../structures/rbtree/rotate.go:11:30:     from rbtree.t, rbtree..dict, rbtree.x := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x (assign-pair) at ../structures/rbtree/rotate.go:11:6
+../structures/rbtree/rotate.go:11:30:   flow: {heap} = rbtree.x:
+../structures/rbtree/rotate.go:11:30:     from rbtree.y.Left.Parent = rbtree.x (assign) at ../structures/rbtree/rotate.go:11:6
+../structures/rbtree/insert.go:12:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/insert.go:12:7:   flow: {temp} = rbtree.t:
+../structures/rbtree/insert.go:12:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Insert(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value) (call parameter) at ../structures/rbtree/insert.go:12:6
+../structures/rbtree/insert.go:12:7:   flow: {heap} = *{temp}:
+../structures/rbtree/delete.go:127:43: parameter rbtree.xParent leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:127:43:   flow: {heap} = rbtree.xParent:
+../structures/rbtree/delete.go:127:43:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).deleteFixup(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x, rbtree.xParent, rbtree.xSide) (call parameter) at ../structures/rbtree/delete.go:127:6
+../structures/rbtree/delete.go:127:31: parameter rbtree.x leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:127:31:   flow: {temp} = rbtree.x:
+../structures/rbtree/delete.go:127:31:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).deleteFixup(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x, rbtree.xParent, rbtree.xSide) (call parameter) at ../structures/rbtree/delete.go:127:6
+../structures/rbtree/delete.go:127:31:   flow: {heap} = *{temp}:
+../structures/rbtree/delete.go:127:7: parameter rbtree.t leaks to {heap} with derefs=2:
+../structures/rbtree/delete.go:127:7:   flow: {temp} = rbtree.t:
+../structures/rbtree/delete.go:127:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).deleteFixup(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.x, rbtree.xParent, rbtree.xSide) (call parameter) at ../structures/rbtree/delete.go:127:6
+../structures/rbtree/delete.go:127:7:   flow: {heap} = **{temp}:
+../structures/rbtree/delete.go:117:29: parameter rbtree.parent leaks to rbtree.~r0 with derefs=1:
+../structures/rbtree/delete.go:117:29:   flow: rbtree.parent = rbtree.parent:
+../structures/rbtree/delete.go:117:29:     from rbtree.t, rbtree..dict, rbtree.parent, rbtree.side := rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.parent, rbtree.side (assign-pair) at ../structures/rbtree/delete.go:117:6
+../structures/rbtree/delete.go:117:29:   flow: rbtree.~r0 = *rbtree.parent:
+../structures/rbtree/delete.go:117:29:     from rbtree.parent.Left (dot of pointer) at ../structures/rbtree/delete.go:117:6
+../structures/rbtree/delete.go:117:29:     from rbtree.~r0 = rbtree.parent.Left (assign-pair) at ../structures/rbtree/delete.go:117:6
+../structures/rbtree/delete.go:117:29:   flow: rbtree.~r0 = rbtree.~r0:
+../structures/rbtree/delete.go:117:29:     from return rbtree.~r0 (return) at ../structures/rbtree/delete.go:117:6
+../structures/rbtree/delete.go:35:65: parameter rbtree.holderParent leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:35:65:   flow: {heap} = rbtree.holderParent:
+../structures/rbtree/delete.go:35:65:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.holder, rbtree.holderSide, rbtree.holderParent) (call parameter) at ../structures/rbtree/delete.go:35:6
+../structures/rbtree/delete.go:35:26: parameter rbtree.holder leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:35:26:   flow: {heap} = rbtree.holder:
+../structures/rbtree/delete.go:35:26:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.holder, rbtree.holderSide, rbtree.holderParent) (call parameter) at ../structures/rbtree/delete.go:35:6
+../structures/rbtree/delete.go:35:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:35:7:   flow: {temp} = rbtree.t:
+../structures/rbtree/delete.go:35:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).delete(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.holder, rbtree.holderSide, rbtree.holderParent) (call parameter) at ../structures/rbtree/delete.go:35:6
+../structures/rbtree/delete.go:35:7:   flow: {heap} = *{temp}:
+../structures/rbtree/delete.go:25:30: parameter rbtree.node leaks to {heap} with derefs=0:
+../structures/rbtree/delete.go:25:30:   flow: {heap} = rbtree.node:
+../structures/rbtree/delete.go:25:30:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.node) (call parameter) at ../structures/rbtree/delete.go:25:6
+../structures/rbtree/delete.go:25:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:25:7:   flow: {temp} = rbtree.t:
+../structures/rbtree/delete.go:25:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).DeleteNode(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.node) (call parameter) at ../structures/rbtree/delete.go:25:6
+../structures/rbtree/delete.go:25:7:   flow: {heap} = *{temp}:
+../structures/rbtree/delete.go:11:7: parameter rbtree.t leaks to {heap} with derefs=1:
+../structures/rbtree/delete.go:11:7:   flow: {temp} = rbtree.t:
+../structures/rbtree/delete.go:11:7:     from (*rbtree.Tree[go.shape.struct { exchange/engine/orderbook/pricelevel.price uint64; exchange/engine/orderbook/pricelevel.volume uint64; exchange/engine/orderbook/pricelevel.list *container/list.List; exchange/engine/orderbook/pricelevel.orderMap map[string]*container/list.Element }]).Delete(rbtree.t, &rbtree..dict.Tree[exchange/engine/orderbook/pricelevel.PriceLevel], rbtree.value) (call parameter) at ../structures/rbtree/delete.go:11:6
+../structures/rbtree/delete.go:11:7:   flow: {heap} = *{temp}:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42: parameter atomic.new leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42:   flow: atomic.new = atomic.new:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42:     from atomic.x, atomic..dict, atomic.old, atomic.new := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.old, atomic.new (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42:   flow: {heap} = atomic.new:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:42:     from atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37: parameter atomic.old leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37:   flow: atomic.old = atomic.old:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37:     from atomic.x, atomic..dict, atomic.old, atomic.new := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.old, atomic.new (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37:   flow: {heap} = atomic.old:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:37:     from atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:   flow: atomic.x = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from atomic.x, atomic..dict, atomic.old, atomic.new := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.old, atomic.new (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:7:     from atomic.CompareAndSwapPointer(&atomic.x.v, unsafe.Pointer(atomic.old), unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:63:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27: parameter atomic.new leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27:   flow: atomic.new = atomic.new:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27:     from atomic.x, atomic..dict, atomic.new := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.new (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27:   flow: {heap} = atomic.new:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:27:     from atomic.SwapPointer(&atomic.x.v, unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:   flow: atomic.x = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from atomic.x, atomic..dict, atomic.new := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.new (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:7:     from atomic.SwapPointer(&atomic.x.v, unsafe.Pointer(atomic.new)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:60:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28: parameter atomic.val leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28:   flow: atomic.val = atomic.val:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28:     from atomic.x, atomic..dict, atomic.val := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.val (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28:   flow: {heap} = atomic.val:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:28:     from atomic.StorePointer(&atomic.x.v, unsafe.Pointer(atomic.val)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:   flow: atomic.x = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from atomic.x, atomic..dict, atomic.val := atomic.x, &atomic..dict.Pointer[sync.poolChainElt], atomic.val (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:7:     from atomic.StorePointer(&atomic.x.v, unsafe.Pointer(atomic.val)) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:57:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7: parameter atomic.x leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:   flow: atomic.x = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from atomic.x, atomic..dict := atomic.x, &atomic..dict.Pointer[sync.poolChainElt] (assign-pair) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:   flow: {heap} = atomic.x:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from atomic.x.v (dot of pointer) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from &atomic.x.v (address-of) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:7:     from atomic.LoadPointer(&atomic.x.v) (call parameter) at ../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/atomic/type.go:54:6
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:112:7: parameter sync.d leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:112:7:   flow: {heap} = sync.d:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:112:7:     from sync.d.poolDequeue (dot of pointer) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:112:7:     from sync.d.poolDequeue (address-of) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:112:7:     from (*sync.poolDequeue).popHead(sync.d.poolDequeue) (call parameter) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:147:7: parameter sync.d leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:147:7:   flow: {heap} = sync.d:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:147:7:     from sync.d.poolDequeue (dot of pointer) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:147:7:     from sync.d.poolDequeue (address-of) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:147:7:     from (*sync.poolDequeue).popTail(sync.d.poolDequeue) (call parameter) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:32: parameter sync.val leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:32:   flow: {heap} = sync.val:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:32:     from (*sync.poolDequeue).pushHead(sync.d.poolDequeue, sync.val) (call parameter) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:7: parameter sync.d leaks to {heap} with derefs=0:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:7:   flow: {heap} = sync.d:
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:7:     from sync.d.poolDequeue (dot of pointer) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:7:     from sync.d.poolDequeue (address-of) at <autogenerated>:1
+../../../../go/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.8.darwin-arm64/src/sync/poolqueue.go:80:7:     from (*sync.poolDequeue).pushHead(sync.d.poolDequeue, sync.val) (call parameter) at <autogenerated>:1

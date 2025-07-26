@@ -1,0 +1,18 @@
+goos: darwin
+goarch: arm64
+pkg: exchange/engine/orderbook/pricelevel
+cpu: Apple M2 Max
+Benchmark_Insert/one_thousand-12         	   10011	    118857 ns/op	  170297 B/op	    1040 allocs/op
+Benchmark_Insert/ten_thousand-12         	     916	   1276172 ns/op	 1454727 B/op	   10281 allocs/op
+Benchmark_Insert/hundred_thousand-12     	     100	  10818995 ns/op	12887635 B/op	  103997 allocs/op
+Benchmark_Insert/million-12              	       6	 184999452 ns/op	171833101 B/op	 1038230 allocs/op
+Benchmark_MatchAndExtract/one_thousand-12         	   20673	     58043 ns/op	   44596 B/op	    1008 allocs/op
+Benchmark_MatchAndExtract/ten_thousand-12         	    2071	    549160 ns/op	  591354 B/op	   10024 allocs/op
+Benchmark_MatchAndExtract/hundred_thousand-12     	     172	   7012979 ns/op	 6560296 B/op	  101185 allocs/op
+Benchmark_MatchAndExtract/million-12              	       8	 125525386 ns/op	79880931 B/op	 1250006 allocs/op
+Benchmark_Remove/one_thousand-12                  	   21469	     54758 ns/op	       0 B/op	       0 allocs/op
+Benchmark_Remove/ten_thousand-12                  	    2216	    532065 ns/op	       0 B/op	       0 allocs/op
+Benchmark_Remove/hundred_thousand-12              	     142	   8158247 ns/op	       0 B/op	       0 allocs/op
+Benchmark_Remove/million-12                       	       6	 213108882 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	exchange/engine/orderbook/pricelevel	55.844s

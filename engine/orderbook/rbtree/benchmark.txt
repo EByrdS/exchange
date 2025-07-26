@@ -1,0 +1,26 @@
+goos: darwin
+goarch: arm64
+pkg: exchange/engine/orderbook/rbtree
+cpu: Apple M2 Max
+Benchmark_Delete/insert_asc_delete_asc_10k-12         	    3783	    282592 ns/op	  266648 B/op	      22 allocs/op
+Benchmark_Delete/insert_asc_delete_desc_10k-12        	    4576	    258897 ns/op	  266579 B/op	      22 allocs/op
+Benchmark_Delete/insert_asc_delete_random_10k-12      	    1418	    851653 ns/op	  266818 B/op	      23 allocs/op
+Benchmark_Delete/insert_desc_delete_asc_10k-12        	    3955	    291518 ns/op	  266587 B/op	      22 allocs/op
+Benchmark_Delete/insert_desc_delete_desc_10k-12       	    4938	    241191 ns/op	  266743 B/op	      22 allocs/op
+Benchmark_Delete/insert_desc_delete_random_10k-12     	    1462	    836940 ns/op	  266518 B/op	      23 allocs/op
+Benchmark_Delete/insert_random_delete_asc_10k-12      	    3783	    301797 ns/op	  266590 B/op	      22 allocs/op
+Benchmark_Delete/insert_random_delete_desc_10k-12     	    4384	    297354 ns/op	  266889 B/op	      22 allocs/op
+Benchmark_Delete/insert_random_delete_random_10k-12   	    1288	    914110 ns/op	  266639 B/op	      22 allocs/op
+Benchmark_Insert/ascending_10k-12                     	    1588	    752333 ns/op	  482117 B/op	   10002 allocs/op
+Benchmark_Insert/descending_10k-12                    	    1545	    805639 ns/op	  482117 B/op	   10002 allocs/op
+Benchmark_Insert/random_10k-12                        	     942	   1289573 ns/op	  482119 B/op	   10002 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_10_cycles_100-12         	   28738	     42352 ns/op	    5078 B/op	      22 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_100_cycles_100-12        	    2745	    451848 ns/op	   15271 B/op	     122 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_1000_cycles_100-12       	     122	   9725607 ns/op	  108165 B/op	    1034 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_10000_cycles_100-12      	       6	 183027833 ns/op	 1544818 B/op	   10063 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_10_cycles_1000-12        	    2822	    390911 ns/op	   25879 B/op	      82 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_100_cycles_1000-12       	     276	   4308325 ns/op	   73073 B/op	     236 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_1000_cycles_1000-12      	      12	  98947708 ns/op	  462155 B/op	    1201 allocs/op
+Benchmark_Insert_Delete/insert_random_delete_random_10000_cycles_1000-12     	       1	1823281415 ns/op	 6059224 B/op	   10289 allocs/op
+PASS
+ok  	exchange/engine/orderbook/rbtree	82.719s
