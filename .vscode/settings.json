@@ -1,0 +1,12 @@
+{
+  "editor.rulers": [80],
+  "emeraldwalk.runonsave": {
+    "autoClearConsole": true,
+    "commands": [
+      {
+        "match": ".*\\.proto",
+        "cmd": "protoc -I=. --go_out=paths=source_relative:. --go-grpc_out=paths=source_relative:. ${relativeFile}",
+      }
+    ]
+  }
+}
